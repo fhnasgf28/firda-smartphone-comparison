@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Perbandingan kamera OPPO Reno6 dan vivo V29e 5G untuk Firda.">
+  <meta name="theme-color" content="#0a0f1f">
+  <title>OPPO Reno6 vs vivo V29e 5G — Pilihan untuk Firda</title>
+  <style>
+    :root {
+      --bg: #080c18;
+      --surface: rgba(255,255,255,.075);
+      --surface-strong: rgba(255,255,255,.11);
+      --line: rgba(255,255,255,.13);
+      --text: #f7f8ff;
+      --muted: #aab2ca;
+      --oppo: #62d8bc;
+      --vivo: #a78bfa;
+      --rose: #fb7185;
+      --yellow: #facc15;
+      --shadow: 0 24px 70px rgba(0,0,0,.34);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 85% 5%, rgba(167,139,250,.24), transparent 28rem),
+        radial-gradient(circle at 10% 25%, rgba(98,216,188,.16), transparent 25rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: auto; }
+    header { padding: 72px 0 30px; text-align: center; }
+    .eyebrow {
+      display: inline-flex; gap: 8px; align-items: center;
+      padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px;
+      color: #dce1f2; background: rgba(255,255,255,.05); font-size: .78rem;
+      font-weight: 750; letter-spacing: .09em; text-transform: uppercase;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rose); box-shadow: 0 0 18px var(--rose); }
+    h1 { margin: 22px auto 14px; max-width: 780px; font-size: clamp(2.25rem, 7vw, 5.2rem); line-height: .98; letter-spacing: -.055em; }
+    h1 span { background: linear-gradient(100deg, var(--oppo), #fff 48%, var(--vivo)); -webkit-background-clip: text; color: transparent; }
+    .intro { max-width: 670px; margin: auto; color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.18rem); }
+    .prices { margin: 28px auto 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .price { padding: 10px 15px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); font-weight: 760; }
+    .price.oppo b { color: var(--oppo); }
+    .price.vivo b { color: #c4b5fd; }
+    .versus { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: stretch; margin: 42px 0 22px; }
+    .phone {
+      position: relative; overflow: hidden; padding: 26px; min-height: 250px;
+      border: 1px solid var(--line); border-radius: 28px; background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .phone::after { content: ""; position: absolute; width: 190px; height: 190px; border-radius: 50%; right: -70px; top: -80px; filter: blur(4px); opacity: .26; }
+    .phone.oppo::after { background: var(--oppo); }
+    .phone.vivo::after { background: var(--vivo); }
+    .phone small { color: var(--muted); font-weight: 720; text-transform: uppercase; letter-spacing: .08em; }
+    .phone h2 { margin: 4px 0 10px; font-size: clamp(1.55rem, 4vw, 2.3rem); line-height: 1.1; }
+    .phone .money { font-size: 1.28rem; font-weight: 850; margin-bottom: 18px; }
+    .phone ul { margin: 0; padding: 0; list-style: none; color: #d9deec; }
+    .phone li { padding: 6px 0; }
+    .phone li::before { content: "✓"; margin-right: 9px; font-weight: 900; }
+    .oppo li::before { color: var(--oppo); }
+    .vivo li::before { color: #c4b5fd; }
+    .vs { align-self: center; width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; background: #fff; color: #101426; font-size: .8rem; font-weight: 950; box-shadow: var(--shadow); z-index: 2; }
+    .winner {
+      margin: 22px 0 48px; padding: clamp(24px, 5vw, 42px); border-radius: 30px;
+      border: 1px solid rgba(167,139,250,.42);
+      background: linear-gradient(135deg, rgba(167,139,250,.19), rgba(251,113,133,.08));
+      box-shadow: var(--shadow);
+    }
+    .winner-tag { display: inline-block; color: #171022; background: linear-gradient(90deg, #ddd6fe, #fda4af); border-radius: 999px; padding: 7px 12px; font-size: .76rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+    .winner h2 { margin: 15px 0 10px; font-size: clamp(1.75rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.03em; }
+    .winner p { margin: 0; max-width: 790px; color: #d8dcef; font-size: 1.05rem; }
+    section { margin: 48px 0; }
+    .section-title { margin-bottom: 18px; }
+    .section-title h2 { margin: 0 0 4px; font-size: clamp(1.65rem, 4vw, 2.4rem); letter-spacing: -.035em; }
+    .section-title p { margin: 0; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .fact { padding: 20px; border-radius: 21px; border: 1px solid var(--line); background: var(--surface); }
+    .fact .icon { font-size: 1.55rem; }
+    .fact h3 { margin: 12px 0 5px; font-size: 1.02rem; }
+    .fact p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .fact strong { display: inline-block; margin-top: 12px; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+    .win-vivo { color: #c4b5fd; }
+    .win-oppo { color: var(--oppo); }
+    .comparison { overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
+    .row { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 14px; padding: 15px 20px; border-bottom: 1px solid var(--line); align-items: center; }
+    .row:last-child { border-bottom: 0; }
+    .row.head { color: var(--muted); font-size: .76rem; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; background: rgba(255,255,255,.035); }
+    .row > :first-child { color: #d8ddee; }
+    .row b { font-size: .94rem; }
+    .decision { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .choice { padding: 23px; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); }
+    .choice h3 { margin: 0 0 7px; }
+    .choice p { margin: 0; color: var(--muted); }
+    .choice.vivo { border-color: rgba(167,139,250,.38); }
+    .choice.oppo { border-color: rgba(98,216,188,.32); }
+    .note { margin-top: 16px; padding: 17px 19px; border-radius: 17px; background: rgba(250,204,21,.08); border: 1px solid rgba(250,204,21,.23); color: #f3eab5; font-size: .93rem; }
+    .sources { color: var(--muted); font-size: .84rem; }
+    .sources details { border: 1px solid var(--line); border-radius: 18px; padding: 15px 18px; background: var(--surface); }
+    .sources summary { cursor: pointer; color: #dfe3f1; font-weight: 800; }
+    .sources ul { margin: 13px 0 0; padding-left: 19px; }
+    .sources li { margin: 8px 0; overflow-wrap: anywhere; }
+    footer { margin-top: 70px; padding: 30px 0 42px; text-align: center; color: var(--muted); border-top: 1px solid var(--line); }
+    footer strong { color: var(--text); }
+    @media (max-width: 820px) {
+      header { padding-top: 52px; }
+      .versus { grid-template-columns: 1fr; }
+      .vs { margin: -34px auto; }
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 22px, 1080px); }
+      .phone { padding: 22px; }
+      .grid, .decision { grid-template-columns: 1fr; }
+      .row { grid-template-columns: 1fr 1fr; font-size: .9rem; }
+      .row > :first-child { grid-column: 1 / -1; font-weight: 800; }
+      .row.head { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="eyebrow"><span class="dot"></span> Kamera jadi prioritas</div>
+      <h1>Firda, pilih <span>OPPO atau vivo?</span></h1>
+      <p class="intro">Saya membandingkan OPPO Reno6 dan vivo V29e 5G dari hal yang paling terasa untuk foto, selfie, portrait, dan video.</p>
+      <div class="prices">
+        <div class="price oppo">OPPO <b>Rp1,8 juta</b></div>
+        <div class="price vivo">vivo <b>Rp2,5 juta</b></div>
+        <div class="price">Selisih <b>Rp700 ribu</b></div>
+      </div>
+    </header>
+
+    <div class="versus" aria-label="Perbandingan singkat kedua ponsel">
+      <article class="phone oppo">
+        <small>Lebih hemat</small>
+        <h2>OPPO Reno6</h2>
+        <div class="money">Rp1.800.000</div>
+        <ul>
+          <li>Kamera utama 64 MP</li>
+          <li>Video hingga 4K 30 fps</li>
+          <li>Selfie 44 MP</li>
+          <li>Lebih ringan, 173 gram</li>
+        </ul>
+      </article>
+      <div class="vs">VS</div>
+      <article class="phone vivo">
+        <small>Lebih siap untuk kamera</small>
+        <h2>vivo V29e 5G</h2>
+        <div class="money">Rp2.500.000</div>
+        <ul>
+          <li>Kamera utama 64 MP + OIS</li>
+          <li>Selfie 50 MP + autofocus</li>
+          <li>Aura Light untuk portrait</li>
+          <li>Penyimpanan 256 GB + 5G</li>
+        </ul>
+      </article>
+    </div>
+
+    <section class="winner">
+      <span class="winner-tag">Pilihan saya untuk Firda</span>
+      <h2>vivo V29e 5G</h2>
+      <p>Kalau kondisi kedua unit sama-sama sehat, saya memilih vivo. OIS membantu mengurangi foto blur saat malam, autofocus membuat selfie lebih konsisten, dan Aura Light lebih berguna untuk portrait. Tambahan Rp700 ribu masuk akal untuk kebutuhan yang memang condong ke kamera.</p>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>Siapa menang di tiap bagian?</h2>
+        <p>Megapiksel bukan satu-satunya penentu hasil kamera.</p>
+      </div>
+      <div class="grid">
+        <article class="fact"><div class="icon">🌙</div><h3>Foto malam</h3><p>OIS membantu kamera tetap stabil saat mengambil cahaya lebih lama.</p><strong class="win-vivo">Menang: vivo</strong></article>
+        <article class="fact"><div class="icon">🤳</div><h3>Selfie</h3><p>50 MP dengan autofocus lebih fleksibel pada jarak wajah yang berbeda.</p><strong class="win-vivo">Menang: vivo</strong></article>
+        <article class="fact"><div class="icon">🎬</div><h3>Resolusi video</h3><p>Reno6 dapat merekam 4K 30 fps; V29e terbatas pada 1080p.</p><strong class="win-oppo">Menang: OPPO</strong></article>
+        <article class="fact"><div class="icon">💸</div><h3>Harga</h3><p>OPPO lebih murah Rp700 ribu dan tetap punya kamera yang layak.</p><strong class="win-oppo">Menang: OPPO</strong></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>Fakta singkat</h2><p>Varian Indonesia: OPPO CPH2235 dan vivo V2317.</p></div>
+      <div class="comparison" role="table" aria-label="Spesifikasi utama">
+        <div class="row head" role="row"><span>Bagian</span><span>OPPO Reno6</span><span>vivo V29e 5G</span></div>
+        <div class="row" role="row"><span>Kamera utama</span><b>64 MP, tanpa OIS</b><b>64 MP, OIS</b></div>
+        <div class="row" role="row"><span>Kamera depan</span><b>44 MP</b><b>50 MP, autofocus</b></div>
+        <div class="row" role="row"><span>Ultrawide</span><b>8 MP</b><b>8 MP</b></div>
+        <div class="row" role="row"><span>Video maksimal</span><b>4K 30 fps</b><b>1080p</b></div>
+        <div class="row" role="row"><span>RAM / penyimpanan</span><b>8 / 128 GB + microSD</b><b>8 / 256 GB</b></div>
+        <div class="row" role="row"><span>Layar</span><b>AMOLED 90 Hz</b><b>AMOLED 120 Hz</b></div>
+        <div class="row" role="row"><span>Baterai</span><b>4.310 mAh, 50 W</b><b>4.800 mAh, 44 W</b></div>
+        <div class="row" role="row"><span>Jaringan</span><b>4G</b><b>5G</b></div>
+        <div class="row" role="row"><span>Tahun rilis</span><b>2021</b><b>2023</b></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>Keputusan paling sederhana</h2></div>
+      <div class="decision">
+        <article class="choice vivo"><h3>📸 Saya pilih vivo jika…</h3><p>Foto malam, selfie, dan portrait adalah prioritas utama saya.</p></article>
+        <article class="choice oppo"><h3>🎥 Saya pilih OPPO jika…</h3><p>Saya ingin hemat Rp700 ribu atau membutuhkan rekaman video 4K.</p></article>
+      </div>
+      <div class="note"><strong>Penting untuk unit bekas:</strong> sebelum membeli, saya tetap mengecek lensa, autofocus, OIS, burn-in layar, kesehatan baterai, IMEI, dan riwayat servis. Unit yang kondisinya sehat lebih penting daripada spesifikasi di atas kertas.</div>
+    </section>
+
+    <section class="sources">
+      <details>
+        <summary>Sumber data dan catatan riset</summary>
+        <ul>
+          <li><a href="https://www.oppo.com/id/newsroom/press/oppo-reno6-resmi-hadir-indonesia/" target="_blank" rel="noopener">OPPO Indonesia — spesifikasi resmi Reno6</a></li>
+          <li><a href="https://www.gsmarena.com/oppo_reno6-11028.php" target="_blank" rel="noopener">GSMArena — OPPO Reno6 CPH2235</a></li>
+          <li><a href="https://www.yangcanggih.com/2021/07/22/review-kamera-oppo-reno-6/" target="_blank" rel="noopener">YANGCANGGIH — pengujian kamera OPPO Reno6</a></li>
+          <li><a href="https://www.gsmarena.com/vivo_v29e-12633.php" target="_blank" rel="noopener">GSMArena — vivo V29e V2317</a></li>
+          <li><a href="https://gizmologi.id/review/vivo-v29e-5g/" target="_blank" rel="noopener">Gizmologi — pengujian vivo V29e 5G</a></li>
+        </ul>
+        <p>Kesimpulan dibuat dari spesifikasi dan ulasan sumber, bukan pengujian side-by-side atas dua unit bekas yang sedang dijual.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Riset oleh <strong>Farhan Assegaf</strong> · 29 Juli 2026</div>
+  </footer>
+</body>
+</html>
