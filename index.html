@@ -3,22 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Perbandingan kamera OPPO Reno6 dan vivo V29e 5G untuk Firda.">
-  <meta name="theme-color" content="#0a0f1f">
-  <title>OPPO Reno6 vs vivo V29e 5G — Pilihan untuk Firda</title>
+  <meta name="description" content="Cerita perbandingan vivo V29e 5G dan vivo V40 Lite 5G untuk Firda, dengan fokus kamera, budget, kondisi unit, dan jarak COD.">
+  <meta name="theme-color" content="#090b16">
+  <title>Untuk Firda: vivo V29e 5G vs vivo V40 Lite 5G</title>
   <style>
     :root {
-      --bg: #080c18;
-      --surface: rgba(255,255,255,.075);
-      --surface-strong: rgba(255,255,255,.11);
+      --bg: #090b16;
+      --surface: rgba(255,255,255,.072);
+      --surface-strong: rgba(255,255,255,.105);
       --line: rgba(255,255,255,.13);
       --text: #f7f8ff;
-      --muted: #aab2ca;
-      --oppo: #62d8bc;
-      --vivo: #a78bfa;
+      --muted: #aeb5ca;
+      --v29: #8b9dff;
+      --v29-soft: #c6ceff;
+      --v40: #ffb86b;
+      --v40-soft: #ffe0ae;
       --rose: #fb7185;
+      --green: #5ee0ad;
       --yellow: #facc15;
-      --shadow: 0 24px 70px rgba(0,0,0,.34);
+      --shadow: 0 28px 80px rgba(0,0,0,.36);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -26,120 +29,146 @@
       margin: 0;
       color: var(--text);
       background:
-        radial-gradient(circle at 85% 5%, rgba(167,139,250,.24), transparent 28rem),
-        radial-gradient(circle at 10% 25%, rgba(98,216,188,.16), transparent 25rem),
+        radial-gradient(circle at 82% 4%, rgba(255,184,107,.20), transparent 29rem),
+        radial-gradient(circle at 9% 19%, rgba(139,157,255,.20), transparent 28rem),
+        radial-gradient(circle at 50% 70%, rgba(251,113,133,.07), transparent 30rem),
         var(--bg);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
+      line-height: 1.58;
     }
     a { color: inherit; }
-    .wrap { width: min(1080px, calc(100% - 32px)); margin: auto; }
-    header { padding: 72px 0 30px; text-align: center; }
+    button, input, select { font: inherit; }
+    .wrap { width: min(1120px, calc(100% - 34px)); margin: auto; }
     .eyebrow {
-      display: inline-flex; gap: 8px; align-items: center;
-      padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px;
-      color: #dce1f2; background: rgba(255,255,255,.05); font-size: .78rem;
-      font-weight: 750; letter-spacing: .09em; text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px;
+      border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.05);
+      color: #e5e8f5; font-size: .77rem; font-weight: 850; letter-spacing: .085em; text-transform: uppercase;
     }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rose); box-shadow: 0 0 18px var(--rose); }
-    h1 { margin: 22px auto 14px; max-width: 780px; font-size: clamp(2.25rem, 7vw, 5.2rem); line-height: .98; letter-spacing: -.055em; }
-    h1 span { background: linear-gradient(100deg, var(--oppo), #fff 48%, var(--vivo)); -webkit-background-clip: text; color: transparent; }
-    .intro { max-width: 670px; margin: auto; color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.18rem); }
-    .prices { margin: 28px auto 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-    .price { padding: 10px 15px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); font-weight: 760; }
-    .price.oppo b { color: var(--oppo); }
-    .price.vivo b { color: #c4b5fd; }
-    .versus { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: stretch; margin: 42px 0 22px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rose); box-shadow: 0 0 20px var(--rose); }
+    header { padding: 76px 0 34px; text-align: center; }
+    h1 { margin: 23px auto 15px; max-width: 900px; font-size: clamp(2.45rem, 7.6vw, 5.8rem); line-height: .96; letter-spacing: -.06em; }
+    h1 span { background: linear-gradient(100deg, var(--v29), #fff 48%, var(--v40)); -webkit-background-clip: text; color: transparent; }
+    .intro { max-width: 760px; margin: auto; color: var(--muted); font-size: clamp(1rem, 2.1vw, 1.18rem); }
+    .jump { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 16px;
+      border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--text);
+      text-decoration: none; font-weight: 800; cursor: pointer; transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.28); background: var(--surface-strong); }
+    .btn.primary { color: #121525; border-color: transparent; background: linear-gradient(100deg, var(--v29-soft), var(--v40-soft)); }
+    .launch-prices { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 17px; }
+    .price-pill { padding: 9px 13px; border: 1px solid var(--line); border-radius: 13px; background: rgba(255,255,255,.045); color: var(--muted); font-size: .88rem; }
+    .price-pill b { color: var(--text); }
+    .versus { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; gap: 18px; margin: 34px 0 22px; }
     .phone {
-      position: relative; overflow: hidden; padding: 26px; min-height: 250px;
-      border: 1px solid var(--line); border-radius: 28px; background: var(--surface);
-      box-shadow: var(--shadow);
+      position: relative; overflow: hidden; min-height: 292px; padding: clamp(23px, 4vw, 31px);
+      border: 1px solid var(--line); border-radius: 29px; background: var(--surface); box-shadow: var(--shadow);
     }
-    .phone::after { content: ""; position: absolute; width: 190px; height: 190px; border-radius: 50%; right: -70px; top: -80px; filter: blur(4px); opacity: .26; }
-    .phone.oppo::after { background: var(--oppo); }
-    .phone.vivo::after { background: var(--vivo); }
-    .phone small { color: var(--muted); font-weight: 720; text-transform: uppercase; letter-spacing: .08em; }
-    .phone h2 { margin: 4px 0 10px; font-size: clamp(1.55rem, 4vw, 2.3rem); line-height: 1.1; }
-    .phone .money { font-size: 1.28rem; font-weight: 850; margin-bottom: 18px; }
-    .phone ul { margin: 0; padding: 0; list-style: none; color: #d9deec; }
+    .phone::after { content: ""; position: absolute; width: 210px; height: 210px; right: -72px; top: -90px; border-radius: 50%; opacity: .24; filter: blur(6px); }
+    .phone.v29::after { background: var(--v29); }
+    .phone.v40::after { background: var(--v40); }
+    .phone small { color: var(--muted); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .phone h2 { position: relative; margin: 4px 0 7px; font-size: clamp(1.65rem, 4vw, 2.45rem); line-height: 1.08; letter-spacing: -.035em; }
+    .phone .role { margin-bottom: 19px; font-size: 1.04rem; font-weight: 800; }
+    .v29 .role { color: var(--v29-soft); }
+    .v40 .role { color: var(--v40-soft); }
+    .phone ul { margin: 0; padding: 0; list-style: none; color: #dce0ee; }
     .phone li { padding: 6px 0; }
-    .phone li::before { content: "✓"; margin-right: 9px; font-weight: 900; }
-    .oppo li::before { color: var(--oppo); }
-    .vivo li::before { color: #c4b5fd; }
-    .vs { align-self: center; width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; background: #fff; color: #101426; font-size: .8rem; font-weight: 950; box-shadow: var(--shadow); z-index: 2; }
-    .winner {
-      margin: 22px 0 48px; padding: clamp(24px, 5vw, 42px); border-radius: 30px;
-      border: 1px solid rgba(167,139,250,.42);
-      background: linear-gradient(135deg, rgba(167,139,250,.19), rgba(251,113,133,.08));
-      box-shadow: var(--shadow);
+    .phone li::before { content: "✓"; display: inline-block; width: 22px; font-weight: 950; }
+    .v29 li::before { color: var(--v29-soft); }
+    .v40 li::before { color: var(--v40-soft); }
+    .vs { align-self: center; width: 55px; height: 55px; display: grid; place-items: center; z-index: 2; border-radius: 50%; background: #fff; color: #111423; box-shadow: var(--shadow); font-size: .78rem; font-weight: 950; }
+    section { margin: 50px 0; }
+    .verdict {
+      padding: clamp(25px, 5vw, 44px); border: 1px solid rgba(139,157,255,.42); border-radius: 31px;
+      background: linear-gradient(135deg, rgba(139,157,255,.18), rgba(255,184,107,.09)); box-shadow: var(--shadow);
     }
-    .winner-tag { display: inline-block; color: #171022; background: linear-gradient(90deg, #ddd6fe, #fda4af); border-radius: 999px; padding: 7px 12px; font-size: .76rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
-    .winner h2 { margin: 15px 0 10px; font-size: clamp(1.75rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.03em; }
-    .winner p { margin: 0; max-width: 790px; color: #d8dcef; font-size: 1.05rem; }
-    section { margin: 48px 0; }
+    .tag { display: inline-flex; padding: 7px 12px; border-radius: 999px; background: linear-gradient(90deg, var(--v29-soft), #e8dcff); color: #171929; font-size: .75rem; font-weight: 950; letter-spacing: .065em; text-transform: uppercase; }
+    .verdict h2 { margin: 15px 0 10px; max-width: 850px; font-size: clamp(1.8rem, 4.5vw, 3.25rem); line-height: 1.08; letter-spacing: -.042em; }
+    .verdict p { max-width: 880px; margin: 0; color: #dce0ef; font-size: 1.04rem; }
+    .verdict .balance { margin-top: 17px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--muted); font-size: .94rem; }
     .section-title { margin-bottom: 18px; }
-    .section-title h2 { margin: 0 0 4px; font-size: clamp(1.65rem, 4vw, 2.4rem); letter-spacing: -.035em; }
-    .section-title p { margin: 0; color: var(--muted); }
-    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .fact { padding: 20px; border-radius: 21px; border: 1px solid var(--line); background: var(--surface); }
-    .fact .icon { font-size: 1.55rem; }
-    .fact h3 { margin: 12px 0 5px; font-size: 1.02rem; }
-    .fact p { margin: 0; color: var(--muted); font-size: .91rem; }
-    .fact strong { display: inline-block; margin-top: 12px; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
-    .win-vivo { color: #c4b5fd; }
-    .win-oppo { color: var(--oppo); }
-    .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .story { position: relative; overflow: hidden; min-height: 270px; padding: 24px; border-radius: 24px; border: 1px solid var(--line); background: var(--surface); }
-    .story::after { content: ""; position: absolute; width: 130px; height: 130px; border-radius: 50%; right: -50px; bottom: -60px; background: var(--story-color, var(--vivo)); opacity: .17; filter: blur(4px); }
-    .story .moment { display: inline-flex; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.08); color: #dce1ef; font-size: .72rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
-    .story .emoji { display: block; margin: 22px 0 8px; font-size: 2rem; }
-    .story h3 { margin: 0 0 8px; font-size: 1.22rem; }
-    .story p { margin: 0; color: var(--muted); font-size: .94rem; }
-    .story .reality { display: block; margin-top: 16px; color: #e8eafa; font-size: .82rem; font-weight: 750; }
-    .quote { margin-top: 15px; padding: clamp(22px, 5vw, 36px); border-radius: 25px; text-align: center; background: linear-gradient(120deg, rgba(98,216,188,.12), rgba(167,139,250,.13)); border: 1px solid var(--line); }
-    .quote p { max-width: 760px; margin: 0 auto; font-family: Georgia, serif; font-size: clamp(1.25rem, 3.4vw, 2rem); line-height: 1.35; color: #f2f3fb; }
+    .section-title h2 { margin: 0 0 5px; font-size: clamp(1.7rem, 4vw, 2.55rem); letter-spacing: -.04em; }
+    .section-title p { margin: 0; max-width: 780px; color: var(--muted); }
+    .story-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .story { position: relative; overflow: hidden; min-height: 304px; padding: 23px; border: 1px solid var(--line); border-radius: 23px; background: var(--surface); }
+    .story::after { content: ""; position: absolute; width: 130px; height: 130px; right: -48px; bottom: -58px; border-radius: 50%; background: var(--story-color, var(--v29)); opacity: .17; filter: blur(5px); }
+    .moment { display: inline-flex; padding: 6px 9px; border-radius: 999px; background: rgba(255,255,255,.075); color: #dde1f0; font-size: .7rem; font-weight: 900; letter-spacing: .065em; text-transform: uppercase; }
+    .emoji { display: block; margin: 21px 0 8px; font-size: 2rem; }
+    .story h3 { margin: 0 0 8px; font-size: 1.15rem; line-height: 1.25; }
+    .story p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .story strong { display: block; margin-top: 15px; color: #eceef8; font-size: .81rem; }
+    .quote { margin-top: 15px; padding: clamp(23px, 5vw, 38px); border: 1px solid var(--line); border-radius: 25px; text-align: center; background: linear-gradient(120deg, rgba(139,157,255,.12), rgba(255,184,107,.11)); }
+    .quote p { max-width: 820px; margin: auto; color: #f3f4fb; font-family: Georgia, serif; font-size: clamp(1.25rem, 3.2vw, 2rem); line-height: 1.38; }
     .quote small { display: block; margin-top: 12px; color: var(--muted); }
-    .tech-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .tech { padding: 22px; border: 1px solid var(--line); border-radius: 21px; background: var(--surface); }
-    .tech h3 { margin: 0 0 7px; font-size: 1.05rem; }
-    .tech p { margin: 0; color: var(--muted); font-size: .91rem; }
-    .tech .plain { display: block; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); color: #e5e8f4; font-size: .86rem; }
-    .price-view { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 16px; padding: 19px 21px; border-radius: 19px; background: rgba(255,255,255,.055); border: 1px solid var(--line); }
-    .price-view p { margin: 0; color: var(--muted); }
-    .price-view strong { flex: 0 0 auto; color: #ddd6fe; font-size: 1.08rem; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .fact { padding: 20px; border: 1px solid var(--line); border-radius: 21px; background: var(--surface); }
+    .fact .icon { font-size: 1.55rem; }
+    .fact h3 { margin: 11px 0 5px; font-size: 1.02rem; }
+    .fact p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .fact strong { display: inline-block; margin-top: 12px; font-size: .76rem; letter-spacing: .065em; text-transform: uppercase; }
+    .win29 { color: var(--v29-soft); }
+    .win40 { color: var(--v40-soft); }
     .comparison { overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
-    .row { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 14px; padding: 15px 20px; border-bottom: 1px solid var(--line); align-items: center; }
+    .row { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 15px; align-items: center; padding: 15px 20px; border-bottom: 1px solid var(--line); }
     .row:last-child { border-bottom: 0; }
-    .row.head { color: var(--muted); font-size: .76rem; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; background: rgba(255,255,255,.035); }
-    .row > :first-child { color: #d8ddee; }
-    .row b { font-size: .94rem; }
+    .row.head { background: rgba(255,255,255,.035); color: var(--muted); font-size: .74rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .row > :first-child { color: #dce0ef; }
+    .row b { font-size: .92rem; }
+    .market-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 15px; }
+    .market-card, .calculator { padding: clamp(22px, 4vw, 30px); border: 1px solid var(--line); border-radius: 25px; background: var(--surface); }
+    .market-card h3, .calculator h3 { margin: 0 0 8px; font-size: 1.3rem; }
+    .market-card > p, .calculator > p { margin: 0; color: var(--muted); }
+    .search-set { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 19px; }
+    .search-link { display: block; padding: 14px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.045); text-decoration: none; }
+    .search-link:hover { border-color: rgba(255,255,255,.3); }
+    .search-link b, .search-link small { display: block; }
+    .search-link small { margin-top: 3px; color: var(--muted); }
+    .checklist { display: grid; gap: 10px; margin-top: 19px; }
+    .check { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; padding: 12px 13px; border-radius: 15px; background: rgba(255,255,255,.04); }
+    .check span { color: var(--green); font-weight: 950; }
+    .check p { margin: 0; color: #dce0ed; font-size: .9rem; }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-top: 18px; }
+    label { display: grid; gap: 6px; color: #dfe2ef; font-size: .84rem; font-weight: 800; }
+    label.full { grid-column: 1 / -1; }
+    input, select { width: 100%; min-height: 43px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 12px; outline: none; background: rgba(5,7,17,.62); color: var(--text); }
+    input:focus, select:focus { border-color: var(--v29); box-shadow: 0 0 0 3px rgba(139,157,255,.12); }
+    .calc-actions { display: flex; gap: 9px; margin-top: 14px; flex-wrap: wrap; }
+    .result { display: none; margin-top: 16px; padding: 17px; border: 1px solid rgba(94,224,173,.25); border-radius: 16px; background: rgba(94,224,173,.07); }
+    .result.show { display: block; }
+    .result h4 { margin: 0 0 7px; color: #bff9df; }
+    .result p { margin: 4px 0; color: #dce6e2; font-size: .9rem; }
     .decision { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .choice { padding: 23px; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); }
+    .choice { padding: 23px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); }
     .choice h3 { margin: 0 0 7px; }
     .choice p { margin: 0; color: var(--muted); }
-    .choice.vivo { border-color: rgba(167,139,250,.38); }
-    .choice.oppo { border-color: rgba(98,216,188,.32); }
-    .note { margin-top: 16px; padding: 17px 19px; border-radius: 17px; background: rgba(250,204,21,.08); border: 1px solid rgba(250,204,21,.23); color: #f3eab5; font-size: .93rem; }
+    .choice.v29 { border-color: rgba(139,157,255,.4); }
+    .choice.v40 { border-color: rgba(255,184,107,.38); }
+    .note { margin-top: 15px; padding: 17px 19px; border: 1px solid rgba(250,204,21,.24); border-radius: 17px; background: rgba(250,204,21,.075); color: #f5edbe; font-size: .92rem; }
     .sources { color: var(--muted); font-size: .84rem; }
-    .sources details { border: 1px solid var(--line); border-radius: 18px; padding: 15px 18px; background: var(--surface); }
-    .sources summary { cursor: pointer; color: #dfe3f1; font-weight: 800; }
+    .sources details { padding: 16px 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .sources summary { cursor: pointer; color: #e2e5f1; font-weight: 850; }
     .sources ul { margin: 13px 0 0; padding-left: 19px; }
     .sources li { margin: 8px 0; overflow-wrap: anywhere; }
-    footer { margin-top: 70px; padding: 30px 0 42px; text-align: center; color: var(--muted); border-top: 1px solid var(--line); }
+    footer { margin-top: 72px; padding: 30px 0 42px; border-top: 1px solid var(--line); text-align: center; color: var(--muted); }
     footer strong { color: var(--text); }
+    @media (max-width: 940px) {
+      .story-grid { grid-template-columns: 1fr 1fr; }
+      .market-layout { grid-template-columns: 1fr; }
+    }
     @media (max-width: 820px) {
-      header { padding-top: 52px; }
+      header { padding-top: 54px; }
       .versus { grid-template-columns: 1fr; }
-      .vs { margin: -34px auto; }
+      .vs { margin: -35px auto; }
       .grid { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 560px) {
-      .wrap { width: min(100% - 22px, 1080px); }
-      .phone { padding: 22px; }
-      .grid, .decision, .story-grid, .tech-grid { grid-template-columns: 1fr; }
-      .price-view { align-items: flex-start; flex-direction: column; }
+    @media (max-width: 580px) {
+      .wrap { width: min(100% - 22px, 1120px); }
+      .story-grid, .grid, .decision, .search-set, .calc-grid { grid-template-columns: 1fr; }
+      label.full { grid-column: auto; }
       .row { grid-template-columns: 1fr 1fr; font-size: .9rem; }
-      .row > :first-child { grid-column: 1 / -1; font-weight: 800; }
+      .row > :first-child { grid-column: 1 / -1; font-weight: 850; }
       .row.head { display: none; }
     }
   </style>
@@ -147,156 +176,264 @@
 <body>
   <main class="wrap">
     <header>
-      <div class="eyebrow"><span class="dot"></span> Kamera jadi prioritas</div>
-      <h1>Firda, pilih <span>OPPO atau vivo?</span></h1>
-      <p class="intro">Kadang yang dicari bukan sekadar kamera dengan angka besar, tetapi HP yang bisa menjaga momen tetap hidup: wajah orang tersayang, tawa bareng teman, dan suasana malam yang tidak bisa diulang.</p>
-      <div class="prices">
-        <div class="price oppo">OPPO <b>Rp1,8 juta</b></div>
-        <div class="price vivo">vivo <b>Rp2,5 juta</b></div>
-        <div class="price">Selisih <b>Rp700 ribu</b></div>
+      <div class="eyebrow"><span class="dot"></span> Cerita pilihan Firda · kamera adalah prioritas saya</div>
+      <h1>Dua vivo, <span>satu keputusan saya.</span></h1>
+      <p class="intro">Saya, Firda, sedang memilih antara vivo V29e 5G dan vivo V40 Lite 5G. Saya ingin kamera yang bisa dipercaya, tetapi saya juga perlu jujur pada budget, kondisi unit, dan seberapa jauh saya harus pergi untuk COD.</p>
+      <div class="jump">
+        <a class="btn primary" href="#kesimpulan">Lihat kesimpulan kamera</a>
+        <a class="btn" href="#marketplace">Cek marketplace & biaya COD</a>
+      </div>
+      <div class="launch-prices" aria-label="Harga resmi saat peluncuran">
+        <span class="price-pill">V29e 8/256 saat rilis: <b>Rp4.399.000</b></span>
+        <span class="price-pill">V40 Lite 5G 8/256 saat rilis: <b>Rp4.299.000</b></span>
+        <span class="price-pill">Harga bekas: <b>ikuti listing aktual</b></span>
       </div>
     </header>
 
-    <div class="versus" aria-label="Perbandingan singkat kedua ponsel">
-      <article class="phone oppo">
-        <small>Lebih hemat</small>
-        <h2>OPPO Reno6</h2>
-        <div class="money">Rp1.800.000</div>
+    <div class="versus" aria-label="Perbandingan ringkas dua ponsel">
+      <article class="phone v29">
+        <small>Spesialis kamera</small>
+        <h2>vivo V29e 5G</h2>
+        <div class="role">Lebih kuat untuk foto & selfie</div>
         <ul>
-          <li>Kamera utama 64 MP</li>
-          <li>Video hingga 4K 30 fps</li>
-          <li>Selfie 44 MP</li>
-          <li>Lebih ringan, 173 gram</li>
+          <li>Kamera utama 64 MP dengan OIS</li>
+          <li>Kamera depan 50 MP dengan autofocus</li>
+          <li>Aura Light untuk portrait malam</li>
+          <li>Bodi belakang kaca, layar AMOLED 120 Hz</li>
         </ul>
       </article>
       <div class="vs">VS</div>
-      <article class="phone vivo">
-        <small>Lebih siap untuk kamera</small>
-        <h2>vivo V29e 5G</h2>
-        <div class="money">Rp2.500.000</div>
+      <article class="phone v40">
+        <small>Lebih muda & praktis</small>
+        <h2>vivo V40 Lite 5G</h2>
+        <div class="role">Lebih kuat untuk pemakaian harian</div>
         <ul>
-          <li>Kamera utama 64 MP + OIS</li>
-          <li>Selfie 50 MP + autofocus</li>
-          <li>Aura Light untuk portrait</li>
-          <li>Penyimpanan 256 GB + 5G</li>
+          <li>Kamera utama 50 MP Sony IMX882</li>
+          <li>Aura Light + AI Erase/Photo Enhancer</li>
+          <li>Baterai 5.000 mAh dan charging 80W</li>
+          <li>Android 14, IP64, microSD hingga 1 TB</li>
         </ul>
       </article>
     </div>
 
-    <section class="winner">
-      <span class="winner-tag">Pilihan saya untuk Firda</span>
-      <h2>vivo V29e 5G</h2>
-      <p>Kalau kondisi kedua unit sama-sama sehat, saya memilih vivo. OIS membantu mengurangi foto blur saat malam, autofocus membuat selfie lebih konsisten, dan Aura Light lebih berguna untuk portrait. Tambahan Rp700 ribu masuk akal untuk kebutuhan yang memang condong ke kamera.</p>
+    <section class="verdict" id="kesimpulan">
+      <span class="tag">Unggul untuk prioritas saya</span>
+      <h2>Untuk kualitas kamera, saya lebih percaya vivo V29e 5G.</h2>
+      <p>Alasannya bukan sekadar 64 MP melawan 50 MP. V29e punya OIS pada kamera utama dan autofocus pada kamera depan—dua fitur yang hilang di V40 Lite 5G. Saat tangan sedikit bergerak, cahaya redup, atau jarak selfie berubah, fitur itu lebih berpeluang menyelamatkan momen saya.</p>
+      <p class="balance"><b>Namun V40 Lite tetap masuk akal.</b> Jika unitnya jauh lebih sehat, lebih dekat untuk COD, lebih murah setelah ongkos perjalanan, atau saya lebih mementingkan baterai dan charging, saya bisa memilih V40 Lite tanpa merasa salah. Rekomendasi ini membantu, tetapi keputusan akhirnya tetap hak saya.</p>
     </section>
 
     <section>
       <div class="section-title">
-        <h2>Bukan cuma foto, tapi cerita yang disimpan</h2>
-        <p>Saya membayangkan tiga momen yang paling mungkin terjadi sehari-hari.</p>
+        <h2>Cerita yang membuat spesifikasi terasa nyata</h2>
+        <p>Saya tidak membeli tabel angka. Saya membeli kemungkinan untuk menyimpan momen tanpa terlalu banyak mengulang.</p>
       </div>
       <div class="story-grid">
-        <article class="story" style="--story-color: var(--rose)">
-          <span class="moment">Momen 01</span><span class="emoji">🌃</span>
-          <h3>Makan malam dan cahaya redup</h3>
-          <p>Firda ingin memotret teman di restoran. Lampunya hangat, tangan sedikit bergerak, dan momennya cuma datang sekali.</p>
-          <span class="reality">vivo lebih menenangkan: OIS + Aura Light membantu hasil portrait tetap terang dan minim blur.</span>
+        <article class="story" style="--story-color: var(--v29)">
+          <span class="moment">Cerita 01</span><span class="emoji">🌃</span>
+          <h3>Makan malam, lampu redup, momen singkat</h3>
+          <p>Saya ingin memotret orang di depan saya. Tangannya bergerak, saya juga tidak benar-benar diam, dan momennya hanya lewat sekali.</p>
+          <strong>Di sini saya memilih V29e: OIS memberi peluang lebih besar agar foto malam tidak berakhir blur.</strong>
         </article>
-        <article class="story" style="--story-color: var(--vivo)">
-          <span class="moment">Momen 02</span><span class="emoji">🥰</span>
-          <h3>Selfie spontan ramai-ramai</h3>
-          <p>Jarak wajah berubah, ada yang dekat dan ada yang sedikit di belakang. Tidak ada waktu mengulang pose berkali-kali.</p>
-          <span class="reality">vivo punya kamera depan 50 MP dengan autofocus; OPPO 44 MP tidak mencantumkan autofocus.</span>
+        <article class="story" style="--story-color: #d8c8ff">
+          <span class="moment">Cerita 02</span><span class="emoji">🤳</span>
+          <h3>Selfie dekat, lalu ramai-ramai</h3>
+          <p>Satu foto diambil dekat wajah, foto berikutnya setengah badan, lalu teman-teman ikut masuk ke frame. Jarak fokus terus berubah.</p>
+          <strong>V29e terasa lebih aman karena kamera depan 50 MP-nya memiliki autofocus; V40 Lite memakai fixed focus.</strong>
         </article>
-        <article class="story" style="--story-color: var(--oppo)">
-          <span class="moment">Momen 03</span><span class="emoji">✈️</span>
-          <h3>Video perjalanan yang ingin disimpan</h3>
-          <p>Pemandangan bagus terasa sayang kalau hanya direkam biasa. Detail video menjadi hal yang ingin dilihat lagi nanti.</p>
-          <span class="reality">OPPO punya keunggulan nyata di resolusi: dapat merekam 4K 30 fps, sedangkan vivo maksimal 1080p.</span>
+        <article class="story" style="--story-color: var(--v40)">
+          <span class="moment">Cerita 03</span><span class="emoji">🔋</span>
+          <h3>Seharian di luar dan baterai menipis</h3>
+          <p>Saya masih perlu maps, chat, kamera, dan mungkin perjalanan pulang. Waktu untuk mengisi baterai cuma sebentar.</p>
+          <strong>V40 Lite lebih nyaman: baterai 5.000 mAh dan 80W mengalahkan 4.800 mAh dan 44W milik V29e.</strong>
+        </article>
+        <article class="story" style="--story-color: var(--green)">
+          <span class="moment">Cerita 04</span><span class="emoji">🛵</span>
+          <h3>Unit bagus, tapi COD-nya jauh</h3>
+          <p>Harga terlihat murah, tetapi saya perlu menghitung bensin, tol, waktu, risiko pulang malam, dan kemungkinan unit tidak sesuai iklan.</p>
+          <strong>Harga HP bukan total biaya. Unit yang dekat, sehat, dan bisa dites tenang sering lebih berharga daripada diskon tipis.</strong>
         </article>
       </div>
       <div class="quote">
-        <p>“HP terbaik bukan yang paling hebat di atas kertas, tetapi yang paling kecil kemungkinannya membuat saya menyesal karena sebuah momen terlewat.”</p>
-        <small>Karena kualitas kamera baru terasa saat momennya tidak bisa diulang.</small>
+        <p>“Kalau saya paling takut kehilangan momen karena blur atau fokus meleset, saya memilih V29e. Kalau saya paling takut salah beli unit bekas, saya memilih unit yang paling sehat—apa pun namanya.”</p>
+        <small>Kamera penting, tetapi kondisi nyata unit tetap menjadi filter pertama.</small>
       </div>
     </section>
 
     <section>
       <div class="section-title">
-        <h2>Siapa menang di tiap bagian?</h2>
-        <p>Megapiksel bukan satu-satunya penentu hasil kamera.</p>
+        <h2>Siapa menang di bagian yang terasa sehari-hari?</h2>
+        <p>Hasil ini memakai acuan vivo V40 Lite <b>5G Indonesia</b>, bukan V40 reguler dan bukan varian 4G.</p>
       </div>
       <div class="grid">
-        <article class="fact"><div class="icon">🌙</div><h3>Foto malam</h3><p>OIS membantu kamera tetap stabil saat mengambil cahaya lebih lama.</p><strong class="win-vivo">Menang: vivo</strong></article>
-        <article class="fact"><div class="icon">🤳</div><h3>Selfie</h3><p>50 MP dengan autofocus lebih fleksibel pada jarak wajah yang berbeda.</p><strong class="win-vivo">Menang: vivo</strong></article>
-        <article class="fact"><div class="icon">🎬</div><h3>Resolusi video</h3><p>Reno6 dapat merekam 4K 30 fps; V29e terbatas pada 1080p.</p><strong class="win-oppo">Menang: OPPO</strong></article>
-        <article class="fact"><div class="icon">💸</div><h3>Harga</h3><p>OPPO lebih murah Rp700 ribu dan tetap punya kamera yang layak.</p><strong class="win-oppo">Menang: OPPO</strong></article>
+        <article class="fact"><div class="icon">🌙</div><h3>Foto malam</h3><p>OIS membantu menjaga gambar lebih stabil saat kamera membutuhkan cahaya lebih lama.</p><strong class="win29">Menang: V29e</strong></article>
+        <article class="fact"><div class="icon">🤳</div><h3>Selfie fleksibel</h3><p>50 MP autofocus lebih adaptif daripada 32 MP fixed focus ketika jarak wajah berubah.</p><strong class="win29">Menang: V29e</strong></article>
+        <article class="fact"><div class="icon">✨</div><h3>Edit & fitur AI</h3><p>AI Erase dan AI Photo Enhancer memberi V40 Lite alat edit yang lebih modern.</p><strong class="win40">Menang: V40 Lite</strong></article>
+        <article class="fact"><div class="icon">⚡</div><h3>Daya & charging</h3><p>5.000 mAh + 80W lebih praktis daripada 4.800 mAh + 44W.</p><strong class="win40">Menang: V40 Lite</strong></article>
+        <article class="fact"><div class="icon">🎥</div><h3>Video maksimal</h3><p>Keduanya sama-sama terbatas di 1080p 30 fps menurut spesifikasi dan ulasan acuan.</p><strong>Hasil: Seri</strong></article>
+        <article class="fact"><div class="icon">💾</div><h3>Ruang penyimpanan</h3><p>V40 Lite menyediakan slot bersama untuk microSD hingga 1 TB; V29e tidak.</p><strong class="win40">Menang: V40 Lite</strong></article>
+        <article class="fact"><div class="icon">💧</div><h3>Ketahanan percikan</h3><p>IP64 pada V40 Lite lebih tinggi daripada IP54 pada V29e, tetapi bukan izin untuk direndam.</p><strong class="win40">Menang: V40 Lite</strong></article>
+        <article class="fact"><div class="icon">📱</div><h3>Usia perangkat</h3><p>V40 Lite rilis 2024 dengan Android 14; V29e rilis 2023 dengan Android 13.</p><strong class="win40">Menang: V40 Lite</strong></article>
       </div>
     </section>
 
     <section>
-      <div class="section-title"><h2>Fakta singkat</h2><p>Varian Indonesia: OPPO CPH2235 dan vivo V2317.</p></div>
-      <div class="comparison" role="table" aria-label="Spesifikasi utama">
-        <div class="row head" role="row"><span>Bagian</span><span>OPPO Reno6</span><span>vivo V29e 5G</span></div>
-        <div class="row" role="row"><span>Kamera utama</span><b>64 MP, f/1.7, tanpa OIS</b><b>64 MP, f/1.8, OIS</b></div>
-        <div class="row" role="row"><span>Kamera depan</span><b>44 MP, f/2.4</b><b>50 MP, f/2.0, autofocus</b></div>
+      <div class="section-title"><h2>Fakta singkat, berdampingan</h2><p>Bagian yang paling relevan untuk kamera, umur pakai, dan kenyamanan.</p></div>
+      <div class="comparison" role="table" aria-label="Spesifikasi vivo V29e dan vivo V40 Lite 5G">
+        <div class="row head" role="row"><span>Bagian</span><span>vivo V29e 5G</span><span>vivo V40 Lite 5G</span></div>
+        <div class="row" role="row"><span>Kamera utama</span><b>64 MP, f/1.79, OIS</b><b>50 MP Sony IMX882, f/1.79, tanpa OIS</b></div>
+        <div class="row" role="row"><span>Kamera depan</span><b>50 MP, f/2.0, autofocus</b><b>32 MP, f/2.45, fixed focus</b></div>
         <div class="row" role="row"><span>Ultrawide</span><b>8 MP</b><b>8 MP</b></div>
-        <div class="row" role="row"><span>Video maksimal</span><b>4K 30 fps</b><b>1080p</b></div>
-        <div class="row" role="row"><span>RAM / penyimpanan</span><b>8 / 128 GB + microSD</b><b>8 / 256 GB</b></div>
-        <div class="row" role="row"><span>Layar</span><b>AMOLED 90 Hz</b><b>AMOLED 120 Hz</b></div>
-        <div class="row" role="row"><span>Baterai</span><b>4.310 mAh, 50 W</b><b>4.800 mAh, 44 W</b></div>
-        <div class="row" role="row"><span>Jaringan</span><b>4G</b><b>5G</b></div>
-        <div class="row" role="row"><span>Bobot</span><b>173 gram</b><b>190 gram</b></div>
-        <div class="row" role="row"><span>Audio kabel</span><b>Ada jack 3,5 mm</b><b>Perlu USB-C/adaptor</b></div>
-        <div class="row" role="row"><span>Ketahanan percikan</span><b>Tidak dicantumkan</b><b>IP54</b></div>
-        <div class="row" role="row"><span>Tahun rilis</span><b>2021</b><b>2023</b></div>
+        <div class="row" role="row"><span>Video maksimal</span><b>1080p 30 fps</b><b>1080p 30 fps</b></div>
+        <div class="row" role="row"><span>Lampu portrait</span><b>Aura Light</b><b>Aura Light</b></div>
+        <div class="row" role="row"><span>Chipset</span><b>Snapdragon 695, 6 nm</b><b>Snapdragon 4 Gen 2, 4 nm</b></div>
+        <div class="row" role="row"><span>RAM / penyimpanan acuan</span><b>8 / 256 GB, UFS 2.2</b><b>8 / 256 GB, UFS 2.2 + microSD</b></div>
+        <div class="row" role="row"><span>Layar</span><b>AMOLED 120 Hz, puncak ±1.150 nit</b><b>AMOLED 120 Hz, puncak 1.800 nit</b></div>
+        <div class="row" role="row"><span>Baterai / charging</span><b>4.800 mAh / 44W</b><b>5.000 mAh / 80W</b></div>
+        <div class="row" role="row"><span>Ketahanan</span><b>IP54</b><b>IP64</b></div>
+        <div class="row" role="row"><span>Material belakang</span><b>Kaca</b><b>Plastik</b></div>
+        <div class="row" role="row"><span>OS saat rilis</span><b>Android 13 / Funtouch 13</b><b>Android 14 / Funtouch 14</b></div>
+        <div class="row" role="row"><span>Tahun rilis Indonesia</span><b>2023</b><b>2024</b></div>
+      </div>
+    </section>
+
+    <section id="marketplace">
+      <div class="section-title">
+        <h2>Marketplace, budget, dan jarak COD</h2>
+        <p>Saya membuka jalur pencarian untuk keduanya. Saya tidak mengunci satu seller karena harga, lokasi, dan kondisi listing bisa berubah kapan saja.</p>
+      </div>
+      <div class="market-layout">
+        <article class="market-card">
+          <h3>🔎 Pencarian marketplace</h3>
+          <p>Saya membandingkan listing yang benar-benar bisa saya cek, bukan hanya harga termurah di layar.</p>
+          <div class="search-set">
+            <a class="search-link" href="https://www.tokopedia.com/search?st=product&q=vivo%20v29e%205g%20bekas" target="_blank" rel="noopener"><b>Tokopedia · V29e</b><small>Buka hasil pencarian bekas</small></a>
+            <a class="search-link" href="https://www.tokopedia.com/search?st=product&q=vivo%20v40%20lite%205g%20bekas" target="_blank" rel="noopener"><b>Tokopedia · V40 Lite</b><small>Buka hasil pencarian bekas</small></a>
+            <a class="search-link" href="https://www.olx.co.id/items/q-vivo-v29e" target="_blank" rel="noopener"><b>OLX · V29e</b><small>Cari unit untuk COD</small></a>
+            <a class="search-link" href="https://www.olx.co.id/items/q-vivo-v40-lite" target="_blank" rel="noopener"><b>OLX · V40 Lite</b><small>Cari unit untuk COD</small></a>
+          </div>
+          <div class="checklist">
+            <div class="check"><span>01</span><p><b>Saya minta sampel kamera asli:</b> foto malam, portrait Aura Light, ultrawide, selfie dekat, dan video sambil berjalan.</p></div>
+            <div class="check"><span>02</span><p><b>Saya cek jarak satu arah dan pulang-pergi:</b> bensin/tol, waktu, lokasi aman, serta apakah seller bersedia bertemu di tempat ramai.</p></div>
+            <div class="check"><span>03</span><p><b>Saya tes unit minimal 20–30 menit:</b> kamera, fokus, layar burn-in, charging, sinyal, speaker, tombol, fingerprint, IMEI, dan akun yang masih tertaut.</p></div>
+            <div class="check"><span>04</span><p><b>Saya berani batal:</b> seller terburu-buru, menolak tes, harga terlalu tidak wajar, IMEI bermasalah, atau hasil kamera tidak sesuai klaim.</p></div>
+          </div>
+        </article>
+
+        <article class="calculator">
+          <h3>🧮 Kalkulator biaya nyata COD</h3>
+          <p>Saya masukkan angka listing yang saya temukan. Estimasi perjalanan dihitung pulang-pergi.</p>
+          <div class="calc-grid">
+            <label class="full">Budget maksimum saya (Rp)<input id="budget" inputmode="numeric" placeholder="contoh: 3000000"></label>
+            <label>Harga V29e (Rp)<input id="price29" inputmode="numeric" placeholder="harga listing"></label>
+            <label>Jarak V29e, sekali jalan (km)<input id="distance29" type="number" min="0" step="0.1" placeholder="0"></label>
+            <label>Kondisi V29e<select id="condition29"><option value="baik">Baik dan lolos tes</option><option value="sangat-baik">Sangat baik / mulus</option><option value="meragukan">Ada catatan / meragukan</option></select></label>
+            <label>Harga V40 Lite (Rp)<input id="price40" inputmode="numeric" placeholder="harga listing"></label>
+            <label>Jarak V40 Lite, sekali jalan (km)<input id="distance40" type="number" min="0" step="0.1" placeholder="0"></label>
+            <label>Kondisi V40 Lite<select id="condition40"><option value="baik">Baik dan lolos tes</option><option value="sangat-baik">Sangat baik / mulus</option><option value="meragukan">Ada catatan / meragukan</option></select></label>
+            <label class="full">Estimasi biaya perjalanan per km (Rp)<input id="costKm" inputmode="numeric" value="2500"></label>
+          </div>
+          <div class="calc-actions">
+            <button class="btn primary" type="button" id="calculate">Bandingkan total biaya</button>
+            <button class="btn" type="button" id="resetCalc">Reset</button>
+          </div>
+          <div class="result" id="result" aria-live="polite"></div>
+        </article>
       </div>
     </section>
 
     <section>
-      <div class="section-title"><h2>Teknis, tapi dijelaskan sederhana</h2><p>Empat istilah yang paling berpengaruh pada pengalaman kamera.</p></div>
-      <div class="tech-grid">
-        <article class="tech"><h3>OIS — stabilisasi optik</h3><p>Lensa atau sensor bergerak untuk mengimbangi getaran tangan. Ini berbeda dari EIS yang menstabilkan secara digital.</p><span class="plain"><b>Artinya untuk Firda:</b> vivo lebih berpeluang menghasilkan foto malam yang tajam saat tangan tidak benar-benar diam.</span></article>
-        <article class="tech"><h3>Autofocus kamera depan</h3><p>Fokus dapat menyesuaikan ketika jarak wajah berubah. Kamera fixed-focus hanya optimal pada rentang jarak tertentu.</p><span class="plain"><b>Artinya untuk Firda:</b> selfie dekat, setengah badan, atau ramai-ramai lebih fleksibel di vivo.</span></article>
-        <article class="tech"><h3>Aura Light</h3><p>Lampu berbentuk cincin membantu menerangi wajah dan mengatur nuansa warna agar lebih sesuai dengan cahaya sekitar.</p><span class="plain"><b>Artinya untuk Firda:</b> portrait indoor dapat terlihat lebih natural daripada hanya mengandalkan flash keras.</span></article>
-        <article class="tech"><h3>4K vs 1080p</h3><p>4K menyimpan lebih banyak detail daripada Full HD, tetapi file lebih besar dan stabilisasi tertentu dapat dibatasi.</p><span class="plain"><b>Artinya untuk Firda:</b> OPPO lebih menarik untuk video detail; vivo lebih kuat sebagai pilihan fotografi.</span></article>
-      </div>
-      <div class="price-view"><p>Selisih vivo adalah <b>Rp700.000</b> atau sekitar <b>38,9%</b> di atas harga OPPO. Jika diasumsikan dipakai dua tahun, selisih itu setara sekitar Rp959 per hari—hanya cara menghitung biaya, bukan jaminan umur perangkat.</p><strong>Rp700 ribu → fitur kamera</strong></div>
-    </section>
-
-    <section>
-      <div class="section-title"><h2>Memilih dengan kepala dan hati</h2><p>Dua pilihan ini sama-sama masuk akal, tetapi memberi rasa aman yang berbeda.</p></div>
+      <div class="section-title"><h2>Keputusan yang paling jujur</h2><p>Saya memisahkan pemenang spesifikasi kamera dari pemenang transaksi nyata.</p></div>
       <div class="decision">
-        <article class="choice vivo"><h3>📸 Saya pilih vivo jika…</h3><p>Saya paling takut kehilangan momen karena foto blur, selfie tidak fokus, atau wajah terlalu gelap. Saya bersedia membayar lebih agar hasil kamera lebih konsisten.</p></article>
-        <article class="choice oppo"><h3>🌿 Saya pilih OPPO jika…</h3><p>Saya merasa lebih tenang ketika bisa menghemat Rp700 ribu. Kameranya tetap layak, video 4K tersedia, dan sisa uangnya bisa dipakai untuk pengalaman yang justru ingin saya abadikan.</p></article>
+        <article class="choice v29"><h3>📸 Saya pilih V29e jika…</h3><p>Unitnya sehat, hasil tes kameranya bersih, dan total biayanya masih masuk budget. Untuk foto malam dan selfie, OIS serta autofocus adalah keunggulan yang nyata bagi prioritas saya.</p></article>
+        <article class="choice v40"><h3>⚡ Saya bisa ambil V40 Lite jika…</h3><p>Unit V29e yang tersedia meragukan atau terlalu jauh, sementara V40 Lite lebih sehat, lebih dekat, dan total biayanya lebih masuk akal. Saya menerima kamera yang sedikit turun demi perangkat yang lebih muda dan praktis.</p></article>
       </div>
-    </section>
-
-    <section>
-      <div class="section-title"><h2>Keputusan paling sederhana</h2></div>
-      <div class="decision">
-        <article class="choice vivo"><h3>Rekomendasi utama: vivo</h3><p>Untuk Firda yang condong ke kamera, vivo V29e 5G adalah pilihan paling lengkap jika kondisi unitnya sehat.</p></article>
-        <article class="choice oppo"><h3>Pengecualian: OPPO</h3><p>Pilih OPPO bila anggaran lebih penting, video 4K wajib, atau unit OPPO terbukti jauh lebih sehat.</p></article>
-      </div>
-      <div class="note"><strong>Penting untuk unit bekas:</strong> sebelum membeli, saya tetap mengecek lensa, autofocus, OIS, burn-in layar, kesehatan baterai, IMEI, dan riwayat servis. Unit yang kondisinya sehat lebih penting daripada spesifikasi di atas kertas.</div>
+      <div class="note"><strong>Batas sederhana saya:</strong> bila kedua unit sama-sama sehat dan selisih total V29e tidak besar, saya memilih V29e untuk kamera. Bila V40 Lite unggul jelas pada kondisi unit, garansi, harga, atau keamanan COD, saya memilih V40 Lite. Sebagai Firda, pilihan akhir tetap milik saya—termasuk hak untuk tidak membeli keduanya.</div>
     </section>
 
     <section class="sources">
       <details>
         <summary>Sumber data dan catatan riset</summary>
         <ul>
-          <li><a href="https://www.oppo.com/id/newsroom/press/oppo-reno6-resmi-hadir-indonesia/" target="_blank" rel="noopener">OPPO Indonesia — spesifikasi resmi Reno6</a></li>
-          <li><a href="https://www.gsmarena.com/oppo_reno6-11028.php" target="_blank" rel="noopener">GSMArena — OPPO Reno6 CPH2235</a></li>
-          <li><a href="https://www.yangcanggih.com/2021/07/22/review-kamera-oppo-reno-6/" target="_blank" rel="noopener">YANGCANGGIH — pengujian kamera OPPO Reno6</a></li>
-          <li><a href="https://www.gsmarena.com/vivo_v29e-12633.php" target="_blank" rel="noopener">GSMArena — vivo V29e V2317</a></li>
-          <li><a href="https://gizmologi.id/review/vivo-v29e-5g/" target="_blank" rel="noopener">Gizmologi — pengujian vivo V29e 5G</a></li>
+          <li><a href="https://www.vivo.com/id/products/param/v29e" target="_blank" rel="noopener">vivo Indonesia — parameter resmi vivo V29e</a></li>
+          <li><a href="https://www.vivo.com/id/products/param/v40-lite-5g" target="_blank" rel="noopener">vivo Indonesia — parameter resmi vivo V40 Lite 5G</a></li>
+          <li><a href="https://www.gsmarena.com/vivo_v29e-12633.php" target="_blank" rel="noopener">GSMArena — spesifikasi vivo V29e Indonesia/global V2317</a></li>
+          <li><a href="https://carisinyal.com/kelebihan-dan-kekurangan-vivo-v40-lite-5g/" target="_blank" rel="noopener">Carisinyal — ulasan vivo V40 Lite 5G, termasuk absennya OIS dan autofocus depan</a></li>
+          <li>Harga resmi di halaman ini adalah harga acuan saat peluncuran, bukan jaminan harga marketplace pada hari pembelian.</li>
         </ul>
-        <p>Kesimpulan dibuat dari spesifikasi dan ulasan sumber, bukan pengujian side-by-side atas dua unit bekas yang sedang dijual.</p>
+        <p>Kesimpulan dibuat dari spesifikasi resmi dan ulasan sumber, bukan pengujian side-by-side terhadap dua unit bekas tertentu. Kondisi unit, harga aktual, jarak, keamanan COD, dan keputusan pembelian sepenuhnya perlu saya nilai saat transaksi.</p>
       </details>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">Riset oleh <strong>Farhan Assegaf</strong> · 29 Juli 2026</div>
-  </footer>
+  <footer><div class="wrap">Riset dan cerita oleh <strong>Farhan Assegaf</strong> · diperbarui 30 Juli 2026</div></footer>
+
+  <script>
+    const money = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 });
+    const currencyValue = (id) => Number(String(document.getElementById(id).value).replace(/[^0-9]/g, '')) || 0;
+    const numberValue = (id) => Number(String(document.getElementById(id).value).replace(',', '.')) || 0;
+
+    document.getElementById('calculate').addEventListener('click', () => {
+      const budget = currencyValue('budget');
+      const price29 = currencyValue('price29');
+      const price40 = currencyValue('price40');
+      const distance29 = numberValue('distance29');
+      const distance40 = numberValue('distance40');
+      const costKm = currencyValue('costKm') || 2500;
+      const condition29 = document.getElementById('condition29').value;
+      const condition40 = document.getElementById('condition40').value;
+      const result = document.getElementById('result');
+
+      if (!price29 || !price40) {
+        result.className = 'result show';
+        result.innerHTML = '<h4>Harga kedua listing belum lengkap</h4><p>Saya isi harga V29e dan V40 Lite terlebih dahulu agar perbandingan totalnya adil.</p>';
+        return;
+      }
+
+      const total29 = price29 + (distance29 * 2 * costKm);
+      const total40 = price40 + (distance40 * 2 * costKm);
+      const gap = Math.abs(total29 - total40);
+      const over29 = budget > 0 && total29 > budget;
+      const over40 = budget > 0 && total40 > budget;
+      let recommendation = '';
+
+      if (over29 && over40) {
+        recommendation = 'Keduanya melewati budget saya. Keputusan paling sehat adalah menunda, menawar, atau mencari listing lain.';
+      } else if (over29 && !over40) {
+        recommendation = condition40 === 'meragukan' ? 'V40 Lite masuk budget, tetapi kondisinya meragukan. Saya tidak memaksakan transaksi dan mencari unit lain.' : 'V40 Lite lebih realistis karena V29e melewati budget saya. Saya tetap tes kamera dan kondisi unit sebelum membayar.';
+      } else if (!over29 && over40) {
+        recommendation = condition29 === 'meragukan' ? 'V29e masuk budget, tetapi kondisinya meragukan. Saya mencari V29e lain atau menunggu listing yang lebih aman.' : 'V29e lebih realistis dan sekaligus lebih kuat untuk kamera karena V40 Lite melewati budget saya.';
+      } else if (condition29 === 'meragukan' && condition40 !== 'meragukan') {
+        recommendation = 'Saya condong ke V40 Lite. Keunggulan kamera V29e tidak berguna jika unit yang tersedia justru bermasalah.';
+      } else if (condition40 === 'meragukan' && condition29 !== 'meragukan') {
+        recommendation = 'Saya condong ke V29e: kondisi lebih meyakinkan dan kamera memang menjadi prioritas saya.';
+      } else if (condition40 === 'sangat-baik' && condition29 !== 'sangat-baik' && total40 <= total29 + 250000) {
+        recommendation = 'Saya bisa mengambil V40 Lite. Kondisinya lebih unggul dan selisih totalnya masih wajar untuk perangkat yang lebih muda.';
+      } else if (total29 <= total40 + 400000) {
+        recommendation = 'Saya condong ke V29e. Selisih totalnya belum terlalu jauh, sementara OIS dan autofocus depan lebih sesuai dengan prioritas kamera saya.';
+      } else {
+        recommendation = 'V40 Lite memberi penghematan total yang cukup besar. Saya bisa memilihnya bila hasil tes kamera sudah memuaskan saya.';
+      }
+
+      result.className = 'result show';
+      result.innerHTML = `
+        <h4>Hasil hitung saya</h4>
+        <p><b>V29e:</b> ${money.format(total29)} termasuk estimasi perjalanan.</p>
+        <p><b>V40 Lite:</b> ${money.format(total40)} termasuk estimasi perjalanan.</p>
+        <p><b>Selisih:</b> ${money.format(gap)}.</p>
+        <p><b>Saran:</b> ${recommendation}</p>
+        <p>Ini hanya alat bantu. Saya tetap berhak memilih unit lain atau membatalkan pembelian.</p>`;
+    });
+
+    document.getElementById('resetCalc').addEventListener('click', () => {
+      ['budget', 'price29', 'distance29', 'price40', 'distance40'].forEach((id) => { document.getElementById(id).value = ''; });
+      document.getElementById('costKm').value = '2500';
+      document.getElementById('condition29').value = 'baik';
+      document.getElementById('condition40').value = 'baik';
+      const result = document.getElementById('result');
+      result.className = 'result';
+      result.innerHTML = '';
+    });
+  </script>
 </body>
 </html>
