@@ -88,6 +88,25 @@
     .fact strong { display: inline-block; margin-top: 12px; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
     .win-vivo { color: #c4b5fd; }
     .win-oppo { color: var(--oppo); }
+    .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .story { position: relative; overflow: hidden; min-height: 270px; padding: 24px; border-radius: 24px; border: 1px solid var(--line); background: var(--surface); }
+    .story::after { content: ""; position: absolute; width: 130px; height: 130px; border-radius: 50%; right: -50px; bottom: -60px; background: var(--story-color, var(--vivo)); opacity: .17; filter: blur(4px); }
+    .story .moment { display: inline-flex; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.08); color: #dce1ef; font-size: .72rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+    .story .emoji { display: block; margin: 22px 0 8px; font-size: 2rem; }
+    .story h3 { margin: 0 0 8px; font-size: 1.22rem; }
+    .story p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .story .reality { display: block; margin-top: 16px; color: #e8eafa; font-size: .82rem; font-weight: 750; }
+    .quote { margin-top: 15px; padding: clamp(22px, 5vw, 36px); border-radius: 25px; text-align: center; background: linear-gradient(120deg, rgba(98,216,188,.12), rgba(167,139,250,.13)); border: 1px solid var(--line); }
+    .quote p { max-width: 760px; margin: 0 auto; font-family: Georgia, serif; font-size: clamp(1.25rem, 3.4vw, 2rem); line-height: 1.35; color: #f2f3fb; }
+    .quote small { display: block; margin-top: 12px; color: var(--muted); }
+    .tech-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .tech { padding: 22px; border: 1px solid var(--line); border-radius: 21px; background: var(--surface); }
+    .tech h3 { margin: 0 0 7px; font-size: 1.05rem; }
+    .tech p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .tech .plain { display: block; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); color: #e5e8f4; font-size: .86rem; }
+    .price-view { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 16px; padding: 19px 21px; border-radius: 19px; background: rgba(255,255,255,.055); border: 1px solid var(--line); }
+    .price-view p { margin: 0; color: var(--muted); }
+    .price-view strong { flex: 0 0 auto; color: #ddd6fe; font-size: 1.08rem; }
     .comparison { overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
     .row { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 14px; padding: 15px 20px; border-bottom: 1px solid var(--line); align-items: center; }
     .row:last-child { border-bottom: 0; }
@@ -117,7 +136,8 @@
     @media (max-width: 560px) {
       .wrap { width: min(100% - 22px, 1080px); }
       .phone { padding: 22px; }
-      .grid, .decision { grid-template-columns: 1fr; }
+      .grid, .decision, .story-grid, .tech-grid { grid-template-columns: 1fr; }
+      .price-view { align-items: flex-start; flex-direction: column; }
       .row { grid-template-columns: 1fr 1fr; font-size: .9rem; }
       .row > :first-child { grid-column: 1 / -1; font-weight: 800; }
       .row.head { display: none; }
@@ -129,7 +149,7 @@
     <header>
       <div class="eyebrow"><span class="dot"></span> Kamera jadi prioritas</div>
       <h1>Firda, pilih <span>OPPO atau vivo?</span></h1>
-      <p class="intro">Saya membandingkan OPPO Reno6 dan vivo V29e 5G dari hal yang paling terasa untuk foto, selfie, portrait, dan video.</p>
+      <p class="intro">Kadang yang dicari bukan sekadar kamera dengan angka besar, tetapi HP yang bisa menjaga momen tetap hidup: wajah orang tersayang, tawa bareng teman, dan suasana malam yang tidak bisa diulang.</p>
       <div class="prices">
         <div class="price oppo">OPPO <b>Rp1,8 juta</b></div>
         <div class="price vivo">vivo <b>Rp2,5 juta</b></div>
@@ -171,6 +191,37 @@
 
     <section>
       <div class="section-title">
+        <h2>Bukan cuma foto, tapi cerita yang disimpan</h2>
+        <p>Saya membayangkan tiga momen yang paling mungkin terjadi sehari-hari.</p>
+      </div>
+      <div class="story-grid">
+        <article class="story" style="--story-color: var(--rose)">
+          <span class="moment">Momen 01</span><span class="emoji">🌃</span>
+          <h3>Makan malam dan cahaya redup</h3>
+          <p>Firda ingin memotret teman di restoran. Lampunya hangat, tangan sedikit bergerak, dan momennya cuma datang sekali.</p>
+          <span class="reality">vivo lebih menenangkan: OIS + Aura Light membantu hasil portrait tetap terang dan minim blur.</span>
+        </article>
+        <article class="story" style="--story-color: var(--vivo)">
+          <span class="moment">Momen 02</span><span class="emoji">🥰</span>
+          <h3>Selfie spontan ramai-ramai</h3>
+          <p>Jarak wajah berubah, ada yang dekat dan ada yang sedikit di belakang. Tidak ada waktu mengulang pose berkali-kali.</p>
+          <span class="reality">vivo punya kamera depan 50 MP dengan autofocus; OPPO 44 MP tidak mencantumkan autofocus.</span>
+        </article>
+        <article class="story" style="--story-color: var(--oppo)">
+          <span class="moment">Momen 03</span><span class="emoji">✈️</span>
+          <h3>Video perjalanan yang ingin disimpan</h3>
+          <p>Pemandangan bagus terasa sayang kalau hanya direkam biasa. Detail video menjadi hal yang ingin dilihat lagi nanti.</p>
+          <span class="reality">OPPO punya keunggulan nyata di resolusi: dapat merekam 4K 30 fps, sedangkan vivo maksimal 1080p.</span>
+        </article>
+      </div>
+      <div class="quote">
+        <p>“HP terbaik bukan yang paling hebat di atas kertas, tetapi yang paling kecil kemungkinannya membuat saya menyesal karena sebuah momen terlewat.”</p>
+        <small>Karena kualitas kamera baru terasa saat momennya tidak bisa diulang.</small>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
         <h2>Siapa menang di tiap bagian?</h2>
         <p>Megapiksel bukan satu-satunya penentu hasil kamera.</p>
       </div>
@@ -186,23 +237,45 @@
       <div class="section-title"><h2>Fakta singkat</h2><p>Varian Indonesia: OPPO CPH2235 dan vivo V2317.</p></div>
       <div class="comparison" role="table" aria-label="Spesifikasi utama">
         <div class="row head" role="row"><span>Bagian</span><span>OPPO Reno6</span><span>vivo V29e 5G</span></div>
-        <div class="row" role="row"><span>Kamera utama</span><b>64 MP, tanpa OIS</b><b>64 MP, OIS</b></div>
-        <div class="row" role="row"><span>Kamera depan</span><b>44 MP</b><b>50 MP, autofocus</b></div>
+        <div class="row" role="row"><span>Kamera utama</span><b>64 MP, f/1.7, tanpa OIS</b><b>64 MP, f/1.8, OIS</b></div>
+        <div class="row" role="row"><span>Kamera depan</span><b>44 MP, f/2.4</b><b>50 MP, f/2.0, autofocus</b></div>
         <div class="row" role="row"><span>Ultrawide</span><b>8 MP</b><b>8 MP</b></div>
         <div class="row" role="row"><span>Video maksimal</span><b>4K 30 fps</b><b>1080p</b></div>
         <div class="row" role="row"><span>RAM / penyimpanan</span><b>8 / 128 GB + microSD</b><b>8 / 256 GB</b></div>
         <div class="row" role="row"><span>Layar</span><b>AMOLED 90 Hz</b><b>AMOLED 120 Hz</b></div>
         <div class="row" role="row"><span>Baterai</span><b>4.310 mAh, 50 W</b><b>4.800 mAh, 44 W</b></div>
         <div class="row" role="row"><span>Jaringan</span><b>4G</b><b>5G</b></div>
+        <div class="row" role="row"><span>Bobot</span><b>173 gram</b><b>190 gram</b></div>
+        <div class="row" role="row"><span>Audio kabel</span><b>Ada jack 3,5 mm</b><b>Perlu USB-C/adaptor</b></div>
+        <div class="row" role="row"><span>Ketahanan percikan</span><b>Tidak dicantumkan</b><b>IP54</b></div>
         <div class="row" role="row"><span>Tahun rilis</span><b>2021</b><b>2023</b></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>Teknis, tapi dijelaskan sederhana</h2><p>Empat istilah yang paling berpengaruh pada pengalaman kamera.</p></div>
+      <div class="tech-grid">
+        <article class="tech"><h3>OIS — stabilisasi optik</h3><p>Lensa atau sensor bergerak untuk mengimbangi getaran tangan. Ini berbeda dari EIS yang menstabilkan secara digital.</p><span class="plain"><b>Artinya untuk Firda:</b> vivo lebih berpeluang menghasilkan foto malam yang tajam saat tangan tidak benar-benar diam.</span></article>
+        <article class="tech"><h3>Autofocus kamera depan</h3><p>Fokus dapat menyesuaikan ketika jarak wajah berubah. Kamera fixed-focus hanya optimal pada rentang jarak tertentu.</p><span class="plain"><b>Artinya untuk Firda:</b> selfie dekat, setengah badan, atau ramai-ramai lebih fleksibel di vivo.</span></article>
+        <article class="tech"><h3>Aura Light</h3><p>Lampu berbentuk cincin membantu menerangi wajah dan mengatur nuansa warna agar lebih sesuai dengan cahaya sekitar.</p><span class="plain"><b>Artinya untuk Firda:</b> portrait indoor dapat terlihat lebih natural daripada hanya mengandalkan flash keras.</span></article>
+        <article class="tech"><h3>4K vs 1080p</h3><p>4K menyimpan lebih banyak detail daripada Full HD, tetapi file lebih besar dan stabilisasi tertentu dapat dibatasi.</p><span class="plain"><b>Artinya untuk Firda:</b> OPPO lebih menarik untuk video detail; vivo lebih kuat sebagai pilihan fotografi.</span></article>
+      </div>
+      <div class="price-view"><p>Selisih vivo adalah <b>Rp700.000</b> atau sekitar <b>38,9%</b> di atas harga OPPO. Jika diasumsikan dipakai dua tahun, selisih itu setara sekitar Rp959 per hari—hanya cara menghitung biaya, bukan jaminan umur perangkat.</p><strong>Rp700 ribu → fitur kamera</strong></div>
+    </section>
+
+    <section>
+      <div class="section-title"><h2>Memilih dengan kepala dan hati</h2><p>Dua pilihan ini sama-sama masuk akal, tetapi memberi rasa aman yang berbeda.</p></div>
+      <div class="decision">
+        <article class="choice vivo"><h3>📸 Saya pilih vivo jika…</h3><p>Saya paling takut kehilangan momen karena foto blur, selfie tidak fokus, atau wajah terlalu gelap. Saya bersedia membayar lebih agar hasil kamera lebih konsisten.</p></article>
+        <article class="choice oppo"><h3>🌿 Saya pilih OPPO jika…</h3><p>Saya merasa lebih tenang ketika bisa menghemat Rp700 ribu. Kameranya tetap layak, video 4K tersedia, dan sisa uangnya bisa dipakai untuk pengalaman yang justru ingin saya abadikan.</p></article>
       </div>
     </section>
 
     <section>
       <div class="section-title"><h2>Keputusan paling sederhana</h2></div>
       <div class="decision">
-        <article class="choice vivo"><h3>📸 Saya pilih vivo jika…</h3><p>Foto malam, selfie, dan portrait adalah prioritas utama saya.</p></article>
-        <article class="choice oppo"><h3>🎥 Saya pilih OPPO jika…</h3><p>Saya ingin hemat Rp700 ribu atau membutuhkan rekaman video 4K.</p></article>
+        <article class="choice vivo"><h3>Rekomendasi utama: vivo</h3><p>Untuk Firda yang condong ke kamera, vivo V29e 5G adalah pilihan paling lengkap jika kondisi unitnya sehat.</p></article>
+        <article class="choice oppo"><h3>Pengecualian: OPPO</h3><p>Pilih OPPO bila anggaran lebih penting, video 4K wajib, atau unit OPPO terbukti jauh lebih sehat.</p></article>
       </div>
       <div class="note"><strong>Penting untuk unit bekas:</strong> sebelum membeli, saya tetap mengecek lensa, autofocus, OIS, burn-in layar, kesehatan baterai, IMEI, dan riwayat servis. Unit yang kondisinya sehat lebih penting daripada spesifikasi di atas kertas.</div>
     </section>
